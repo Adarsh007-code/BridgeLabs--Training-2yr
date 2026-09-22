@@ -1,0 +1,13 @@
+class Lc189 {
+    public void rotate(int[] nums, int k) {
+        int n = nums.length;
+        int []temp = new int[n];
+        k = k % n;
+        for(int i=0;i<nums.length;i++){
+            temp[(i+k)%n] = nums[i];
+        }
+        for(int i=0;i<nums.length;i++){
+            nums[i] = temp[i];
+        }
+    }
+}
